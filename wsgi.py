@@ -7,4 +7,5 @@ app = Flask(__name__) #convention, name taken from the package
 # home route directory
 def home():
     dice = Dice()
-    return jsonify({'roll': dice.roll()})
+    roll = dice.roll()
+    return jsonify({'roll': roll})
